@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "name": "Telewizor LED 55 cali",
+      "description": "Wysokiej jakości telewizor LED o rozmiarze 55 cali",
+      "id": 1,
+      "price": 1999.99,
+      "quantity": 5
+    },
+    {
+      "name": "Smartfon Samsung Galaxy S21",
+      "description": "Nowoczesny smartfon z najlepszymi funkcjami i wydajnością",
+      "id": 2,
+      "price": 2599.99,
+      "quantity": 10
+    },
+    {
+      "name": "Laptop Dell XPS 15",
+      "description": "Wyjątkowo wydajny laptop z ekranem 15 cali i najnowszym procesorem",
+      "id": 3,
+      "price": 3999.99,
+      "quantity": 3
+    },
+    {
+      "name": "Słuchawki bezprzewodowe Sony WH-1000XM4",
+      "description": "Najlepsze słuchawki bezprzewodowe z redukcją hałasu",
+      "id": 4,
+      "price": 1299.99,
+      "quantity": 8
+    },
+    {
+      "name": "Aparat fotograficzny Canon EOS 5D Mark IV",
+      "description": "Profesjonalny aparat fotograficzny z dużą matrycą i zaawansowanymi funkcjami",
+      "id": 5,
+      "price": 3499.99,
+      "quantity": 2
+    },
+    {
+      "name": "Konsola do gier Xbox Series X",
+      "description": "Najnowsza konsola do gier z najlepszą grafiką i wydajnością",
+      "id": 6,
+      "price": 2499.99,
+      "quantity": 7
+    },
+    {
+      "name": "Smartwatch Apple Watch Series 6",
+      "description": "Inteligentny zegarek z zaawansowanymi funkcjami zdrowotnymi",
+      "id": 7,
+      "price": 1499.99,
+      "quantity": 12
+    },
+    {
+      "name": "Słuchawki douszne Apple AirPods Pro",
+      "description": "Bezprzewodowe słuchawki douszne z doskonałym dźwiękiem",
+      "id": 8,
+      "price": 499.99,
+      "quantity": 15
+    },
+    {
+      "name": "Monitor LG UltraGear 27GN950-B",
+      "description": "Monitor gamingowy o rozdzielczości 4K i częstotliwości odświeżania 144 Hz",
+      "id": 9,
+      "price": 1999.99,
+      "quantity": 6
+    },
+    {
+      "name": "Klawiatura mechaniczna Corsair K95 RGB Platinum",
+      "description": "Wyjątkowa klawiatura mechaniczna z podświetleniem RGB i dodatkowymi przyciskami makro",
+      "id": 10,
+      "price": 599.99,
+      "quantity": 9
+    },
+    {
+      "name": "Mysz bezprzewodowa Logitech MX Master 3",
+      "description": "Wygodna i precyzyjna mysz bezprzewodowa dla profesjonalistów",
+      "id": 11,
+      "price": 149.99,
+      "quantity": 20
+    },
+    {
+      "name": "Drukarka laserowa HP LaserJet Pro MFP M428dw",
+      "description": "Wydajna drukarka laserowa z funkcjami drukowania dwustronnego i skanowania",
+      "id": 12,
+      "price": 699.99,
+      "quantity": 4
+    },
+    {
+      "name": "Głośniki przenośne JBL Charge 4",
+      "description": "Wodoodporne głośniki przenośne z długim czasem pracy baterii",
+      "id": 13,
+      "price": 299.99,
+      "quantity": 15
+    },
+    {
+      "name": "Rower górski Scott Aspect 950",
+      "description": "Solidny rower górski do jazdy po trudnym terenie",
+      "id": 14,
+      "price": 1999.99,
+      "quantity": 3
+    },
+    {
+      "name": "Lodówka Samsung French Door",
+      "description": "Duża lodówka z systemem podwójnych drzwi i funkcjami oszczędzania energii",
+      "id": 15,
+      "price": 3499.99,
+      "quantity": 5
+    },
+    {
+      "name": "Ekspres do kawy De'Longhi Magnifica",
+      "description": "Automatyczny ekspres do kawy z młynkiem i możliwością przygotowania różnych napojów",
+      "id": 16,
+      "price": 1599.99,
+      "quantity": 8
+    },
+    {
+      "name": "Mikrofalówka Bosch Serie 6",
+      "description": "Nowoczesna mikrofalówka z funkcją grilla i wieloma programami gotowania",
+      "id": 17,
+      "price": 499.99,
+      "quantity": 10
+    },
+    {
+      "name": "Odkurzacz bezprzewodowy Dyson V11",
+      "description": "Potężny odkurzacz bezprzewodowy z długim czasem pracy baterii",
+      "id": 18,
+      "price": 899.99,
+      "quantity": 6
+    },
+    {
+      "name": "Żelazko parowe Philips PerfectCare Elite Plus",
+      "description": "Zaawansowane żelazko parowe z technologią bezpiecznego prasowania",
+      "id": 19,
+      "price": 249.99,
+      "quantity": 12
+    },
+    {
+      "name": "Suszarka do włosów Dyson Supersonic",
+      "description": "Innowacyjna suszarka do włosów z technologią ochrony przed przegrzaniem",
+      "id": 20,
+      "price": 399.99,
+      "quantity": 9
+    }
+  ]
+}
