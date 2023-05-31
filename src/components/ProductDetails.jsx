@@ -1,4 +1,4 @@
-import {Link, useParams} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import Grid from "@mui/material/Grid";
 import {Button, Card, CardContent, CardMedia, Chip, Typography,} from "@mui/material";
@@ -9,6 +9,7 @@ import Container from "@mui/material/Container";
 function ProductDetails() {
     const [product, setProduct] = useState({});
     const {productId} = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
         getProduct(productId).then((product) => setProduct(product));
@@ -17,6 +18,17 @@ function ProductDetails() {
     async function getProduct(id) {
         const response = await fetch(`http://localhost:3000/products/${id}`);
         return await response.json();
+    }
+
+    async function deleteProductAPI(id) {
+        await fetch(`http://localhost:3000/products/${id}`, {
+            method: "DELETE",
+        });
+    }
+
+    async function deleteProduct() {
+        await deleteProductAPI(productId);
+        navigate("/");
     }
 
     return (
@@ -62,6 +74,10 @@ function ProductDetails() {
                                 <Link to={"/"}>
                                     <Button size="small">Back</Button>
                                 </Link>
+
+                                <Button onClick={deleteProduct} size="small">
+                                    Delete
+                                </Button>
                             </CardActions>
                         </Card>
                     </Grid>
