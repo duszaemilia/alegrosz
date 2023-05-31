@@ -1,15 +1,7 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import Grid from "@mui/material/Unstable_Grid2";
-import {
-    Button,
-    Card,
-    CardContent,
-    CardMedia,
-    TextField,
-    Typography,
-} from "@mui/material";
-import CardActions from "@mui/material/CardActions";
-import { faker } from "@faker-js/faker";
+import ProductSearch from "./components/ProductSearch.jsx";
+import ProductList from "./components/ProductList.jsx";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -31,55 +23,14 @@ function App() {
                     <h1>Alegrosz</h1>
                 </Grid>
                 <Grid xs={12}>
-                    <TextField
-                        id="standard-basic"
-                        label="Search Products"
-                        variant="standard"
-                        value={search}
-                        onChange={(event) => setSearch(event.target.value)}
-                    />
+                    <ProductSearch search={search} setSearch={setSearch}/>
                 </Grid>
+                <ProductList products={products} search={search}/>
 
-                {products
-                    .filter((product) =>
-                        `${product.name} ${product.description}`
-                            .toLowerCase()
-                            .includes(search.toLowerCase())
-                    )
-                    .map((product) => (
-                        <Grid key={product.id}>
-                            <Card sx={{ maxWidth: 345 }}>
-                                <CardMedia
-                                    sx={{ height: 140 }}
-                                    image={faker.image.urlLoremFlickr({
-                                        category: "technics",
-                                    })}
-                                    title="green iguana"
-                                />
-                                <CardContent>
-                                    <Typography
-                                        gutterBottom
-                                        variant="h5"
-                                        component="div"
-                                    >
-                                        {product.name}
-                                    </Typography>
-                                    <Typography
-                                        variant="body2"
-                                        color="text.secondary"
-                                    >
-                                        {product.description}
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small">See details</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                    ))}
             </Grid>
         </>
     );
 }
+
 
 export default App;
