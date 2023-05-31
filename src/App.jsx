@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
-import Grid from "@mui/material/Unstable_Grid2";
+import Grid from "@mui/material/Grid";
 import ProductSearch from "./components/ProductSearch.jsx";
 import ProductList from "./components/ProductList.jsx";
+import Container from "@mui/material/Container";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -18,15 +19,23 @@ function App() {
 
     return (
         <>
-            <Grid container rowSpacing={3} columnSpacing={3}>
-                <Grid xs={12}>
-                    <h1>Alegrosz</h1>
+            <Container maxWidth="xl">
+                <Grid container spacing={2}>
+                    <Grid item xs={12}>
+                        <h1>Alegrosz</h1>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <ProductSearch search={search} setSearch={setSearch}/>
+                    </Grid>
+                    <Grid
+                        item
+                        xs={12}
+                        sx={{display: "flex", flexWrap: "wrap", gap: "10px"}}
+                    >
+                        <ProductList products={products} search={search}/>
+                    </Grid>
                 </Grid>
-                <Grid xs={12}>
-                    <ProductSearch search={search} setSearch={setSearch}/>
-                </Grid>
-                <ProductList products={products} search={search}/>
-            </Grid>
+            </Container>
         </>
     );
 }
