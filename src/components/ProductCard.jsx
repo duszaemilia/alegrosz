@@ -1,9 +1,10 @@
-import {Button, Card, CardContent, CardMedia, Typography} from "@mui/material";
+import {Button, Card, CardContent, CardMedia, Typography,} from "@mui/material";
 import {faker} from "@faker-js/faker";
 import CardActions from "@mui/material/CardActions";
 import Grid from "@mui/material/Unstable_Grid2";
+import PropTypes from "prop-types";
 
-function ProductCard(product) {
+function ProductCard({product}) {
     return (
         <Grid key={product.id}>
             <Card sx={{maxWidth: 345}}>
@@ -15,17 +16,10 @@ function ProductCard(product) {
                     title="green iguana"
                 />
                 <CardContent>
-                    <Typography
-                        gutterBottom
-                        variant="h5"
-                        component="div"
-                    >
+                    <Typography gutterBottom variant="h5" component="div">
                         {product.name}
                     </Typography>
-                    <Typography
-                        variant="body2"
-                        color="text.secondary"
-                    >
+                    <Typography variant="body2" color="text.secondary">
                         {product.description}
                     </Typography>
                 </CardContent>
@@ -37,13 +31,12 @@ function ProductCard(product) {
     );
 }
 
-
 ProductCard.propTypes = {
-    product: PropTypes.shape{
-        type: {
-            id:PropTypes
-        }
-}
-.isRequired,
-}
+    product: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+    }).isRequired,
+};
+
 export default ProductCard;

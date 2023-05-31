@@ -26,11 +26,9 @@ function App() {
                     <ProductSearch search={search} setSearch={setSearch}/>
                 </Grid>
                 <ProductList products={products} search={search}/>
-
             </Grid>
         </>
     );
 }
-
 
 export default App;

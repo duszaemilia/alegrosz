@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 function ProductList({products, search}) {
     return (
-
         <>
             {products
                 .filter((product) =>
@@ -12,7 +11,11 @@ function ProductList({products, search}) {
                         .includes(search.toLowerCase())
                 )
                 .map((product) => (
-                    <ProductCard key={product.id}/>
+                    <ProductCard
+                        magic={42}
+                        key={product.id}
+                        product={product}
+                    />
                 ))}
         </>
     );
@@ -20,7 +23,7 @@ function ProductList({products, search}) {
 
 ProductList.propTypes = {
     products: PropTypes.array.isRequired,
-    search: PropTypes.string.isRequired
+    search: PropTypes.string.isRequired,
 };
 
 export default ProductList;
