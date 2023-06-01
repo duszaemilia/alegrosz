@@ -74,6 +74,13 @@ function ProductDetails() {
                                 <Link to={"/"}>
                                     <Button size="small">Back</Button>
                                 </Link>
+                                <Link to={`/product-edit/${product.id}`}>
+                                    <Button
+                                        size="small"
+                                        variant="outline">
+                                        `Edit ${product.name}`
+                                    </Button>
+                                </Link>
 
                                 <Button onClick={deleteProduct} size="small">
                                     Delete
@@ -84,7 +91,8 @@ function ProductDetails() {
                 </Grid>
             </Container>
         </>
-    );
+    )
+        ;
 }
 
 export default ProductDetails;
