@@ -72,17 +72,26 @@ function ProductDetails() {
                             </CardContent>
                             <CardActions>
                                 <Link to={"/"}>
-                                    <Button size="small">Back</Button>
-                                </Link>
-                                <Link to={`/product-edit/${product.id}`}>
-                                    <Button
-                                        size="small"
-                                        variant="outline">
-                                        `Edit ${product.name}`
+                                    <Button size="small" variant="outlined">
+                                        Back
                                     </Button>
                                 </Link>
 
-                                <Button onClick={deleteProduct} size="small">
+                                <Link to={`/product-edit/${product.id}`}>
+                                    <Button
+                                        size="small"
+                                        variant="outlined"
+                                        sx={{marginRight: 1}}
+                                    >
+                                        Edit {product.name}
+                                    </Button>
+                                </Link>
+
+                                <Button
+                                    onClick={deleteProduct}
+                                    size="small"
+                                    variant="outlined"
+                                >
                                     Delete
                                 </Button>
                             </CardActions>
@@ -91,8 +100,7 @@ function ProductDetails() {
                 </Grid>
             </Container>
         </>
-    )
-        ;
+    );
 }
 
 export default ProductDetails;

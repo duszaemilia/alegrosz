@@ -5,7 +5,12 @@ import Container from "@mui/material/Container";
 import {useParams} from "react-router-dom";
 
 class EditProduct extends Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            product: {},
+        };
+    }
 
     componentDidMount() {
         this.getProduct(this.props.productId).then((product) => {
