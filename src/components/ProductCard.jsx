@@ -1,4 +1,4 @@
-import {Button, Card, CardContent, CardMedia, Typography,} from "@mui/material";
+import {Button, Card, CardContent, CardMedia, Chip, Typography,} from "@mui/material";
 import {faker} from "@faker-js/faker";
 import CardActions from "@mui/material/CardActions";
 import PropTypes from "prop-types";
@@ -26,6 +26,11 @@ function ProductCard({product}) {
                 <Link to={`/product-details/${product.id}`}>
                     <Button size="small">See details</Button>
                 </Link>
+                <Chip
+                    label={`$${product.price}`}
+                    variant="outlined"
+                    sx={{marginRight: "20px"}}
+                />
             </CardActions>
         </Card>
     );

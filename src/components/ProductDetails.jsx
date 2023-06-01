@@ -1,7 +1,7 @@
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
 import Grid from "@mui/material/Grid";
-import {Button, Card, CardContent, CardMedia, Chip, Typography,} from "@mui/material";
+import {Button, Card, CardContent, CardMedia, Chip, CircularProgress, Typography,} from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import {faker} from "@faker-js/faker";
 import Container from "@mui/material/Container";
@@ -51,6 +51,21 @@ function ProductDetails() {
         setCart((prev) => prev + product.price);
         setProduct({...product, quantity: product.quantity - 1});
         await updateStock(productId, product.quantity - 1);
+    }
+
+    if (!Object.keys(product).length) {
+        return (
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    minHeight: "100vh",
+                }}
+            >
+                <CircularProgress color="success"/>
+            </div>
+        );
     }
 
     return (
